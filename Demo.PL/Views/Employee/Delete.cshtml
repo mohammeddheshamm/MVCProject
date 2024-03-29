@@ -1,0 +1,16 @@
+﻿@model EmployeeViewModel 
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Are you sure to delete this Employee?</h1>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <input hidden asp-for="ImageName"/>
+    <partial name="PartialViews/DeleteDetailsEmployeePartialView"/>
+    <input type="submit" value="Delete" class="btn btn-danger" /> |
+    <a asp-action="index" class="btn btn-light">Cancel</a>
+
+</form>
+
+

@@ -1,0 +1,12 @@
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.DAL\bin\Debug\net5.0\Demo.DAL.deps.json
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.DAL\bin\Debug\net5.0\Demo.DAL.dll
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.DAL\bin\Debug\net5.0\Demo.DAL.pdb
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.DAL\obj\Debug\net5.0\Demo.DAL.csproj.AssemblyReference.cache
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.DAL\obj\Debug\net5.0\Demo.DAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.DAL\obj\Debug\net5.0\Demo.DAL.AssemblyInfoInputs.cache
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.DAL\obj\Debug\net5.0\Demo.DAL.AssemblyInfo.cs
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.DAL\obj\Debug\net5.0\Demo.DAL.csproj.CoreCompileInputs.cache
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.DAL\obj\Debug\net5.0\Demo.DAL.dll
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.DAL\obj\Debug\net5.0\refint\Demo.DAL.dll
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.DAL\obj\Debug\net5.0\Demo.DAL.pdb
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.DAL\obj\Debug\net5.0\ref\Demo.DAL.dll

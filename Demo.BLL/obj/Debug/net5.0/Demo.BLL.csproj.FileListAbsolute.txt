@@ -1,0 +1,15 @@
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.BLL\bin\Debug\net5.0\Demo.BLL.deps.json
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.BLL\bin\Debug\net5.0\Demo.BLL.dll
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.BLL\bin\Debug\net5.0\Demo.BLL.pdb
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.BLL\bin\Debug\net5.0\Demo.DAL.dll
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.BLL\bin\Debug\net5.0\Demo.DAL.pdb
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.BLL\obj\Debug\net5.0\Demo.BLL.csproj.AssemblyReference.cache
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.BLL\obj\Debug\net5.0\Demo.BLL.GeneratedMSBuildEditorConfig.editorconfig
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.BLL\obj\Debug\net5.0\Demo.BLL.AssemblyInfoInputs.cache
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.BLL\obj\Debug\net5.0\Demo.BLL.AssemblyInfo.cs
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.BLL\obj\Debug\net5.0\Demo.BLL.csproj.CoreCompileInputs.cache
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.BLL\obj\Debug\net5.0\Demo.BLL.csproj.CopyComplete
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.BLL\obj\Debug\net5.0\Demo.BLL.dll
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.BLL\obj\Debug\net5.0\refint\Demo.BLL.dll
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.BLL\obj\Debug\net5.0\Demo.BLL.pdb
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.BLL\obj\Debug\net5.0\ref\Demo.BLL.dll
