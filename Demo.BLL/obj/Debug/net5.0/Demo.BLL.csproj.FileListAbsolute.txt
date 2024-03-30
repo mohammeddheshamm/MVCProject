@@ -13,3 +13,4 @@ E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution
 E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.BLL\obj\Debug\net5.0\refint\Demo.BLL.dll
 E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.BLL\obj\Debug\net5.0\Demo.BLL.pdb
 E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.BLL\obj\Debug\net5.0\ref\Demo.BLL.dll
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.BLL\obj\Debug\net5.0\Demo.BLL.sourcelink.json

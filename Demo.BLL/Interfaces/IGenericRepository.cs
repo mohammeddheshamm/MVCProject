@@ -1,4 +1,6 @@
-﻿using Demo.DAL.Entities;
+﻿using Demo.BLL.Specification;
+using Demo.DAL.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,5 +17,8 @@ namespace Demo.BLL.Interfaces
         Task<int> Add(T item);
         Task<int> Update(T item);
         Task<int> Delete(T item);
+        Task<IReadOnlyList<T>> SearchByNameWithSpec(ISpecification<T> spec);
+
+
     }
 }

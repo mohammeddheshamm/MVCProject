@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Demo.BLL.Interfaces
 {
-    public interface IUnitOfWork
+    public interface IUnitOfWork : IDisposable
     {
-        public IEmployeeRepository EmployeeRepository { get; set; }
-        public IDepartmentRepository DepartmentRepository { get; set; }
+        IGenericRepository<TEntity> Repository<TEntity>() where TEntity : class;
+        Task<int> Complete();
     }
 }

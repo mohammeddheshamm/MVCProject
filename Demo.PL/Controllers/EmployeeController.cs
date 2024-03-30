@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Demo.BLL.Interfaces;
+using Demo.BLL.Specification;
 using Demo.DAL.Entities;
 using Demo.PL.Helpers;
 using Demo.PL.ViewModels;
@@ -29,10 +30,13 @@ namespace Demo.PL.Controllers
         {
             var employees = Enumerable.Empty<Employee>();
             if (string.IsNullOrEmpty(SearchValue))
-                 employees = await _unitOfWork.EmployeeRepository.GetAll();
-             
+                employees = await _unitOfWork.Repository<Employee>().GetAll();
+
             else
-                 employees = _unitOfWork.EmployeeRepository.SearchEmployeesByName(SearchValue);
+            {
+                var spec = new EmployeeWithDepartmentSpecification(SearchValue);
+                employees = await _unitOfWork.Repository<Employee>().SearchByNameWithSpec(spec);
+            }
             
             var mappedEmps = _mapper.Map<IEnumerable<Employee>, IEnumerable<EmployeeViewModel>>(employees);
             return View(mappedEmps);
@@ -41,7 +45,7 @@ namespace Demo.PL.Controllers
         [HttpGet]
         public async Task<IActionResult> Create()
         {
-            ViewBag.Departments = await _unitOfWork.EmployeeRepository.GetAll();
+            ViewBag.Departments = await _unitOfWork.Repository<Employee>().GetAll();
             return View();
         }
 
@@ -66,7 +70,7 @@ namespace Demo.PL.Controllers
                 ///    DepartmentId = employeeVM.DepartmentId,
                 ///};
                 var mappedEmp = _mapper.Map<EmployeeViewModel , Employee>(employeeVM);
-                await _unitOfWork.EmployeeRepository.Add(mappedEmp);
+                await _unitOfWork.Repository<Employee>().Add(mappedEmp);
                 return RedirectToAction(nameof(Index));
             }
             return View(employeeVM);
@@ -77,7 +81,7 @@ namespace Demo.PL.Controllers
         {
             if (id == null)
                 return BadRequest();
-            var employee = await _unitOfWork.EmployeeRepository.Get(id.Value);
+            var employee = await _unitOfWork.Repository<Employee>().Get(id.Value);
             if(employee == null)
                 return BadRequest();
             var mappedEmp = _mapper.Map<Employee, EmployeeViewModel>(employee);
@@ -108,7 +112,7 @@ namespace Demo.PL.Controllers
                         employeeVM.ImageName = DocumentSetting.UploadFile(employeeVM.Image, "images");
 
                     var mappedEmp = _mapper.Map<EmployeeViewModel, Employee>(employeeVM);
-                    await _unitOfWork.EmployeeRepository.Update(mappedEmp);
+                    await _unitOfWork.Repository<Employee>().Update(mappedEmp);
                     return RedirectToAction(nameof(Index));
                 }
                 catch(Exception ex) 
@@ -135,7 +139,7 @@ namespace Demo.PL.Controllers
             try
             {
                 var mappedEmp = _mapper.Map<EmployeeViewModel, Employee>(employeeVM);
-                int count = await _unitOfWork.EmployeeRepository.Delete(mappedEmp);
+                int count = await _unitOfWork.Repository<Employee>().Delete(mappedEmp);
                 if(count > 0)
                     DocumentSetting.DeleteFile(employeeVM.ImageName, "images");
                 return RedirectToAction(nameof(Index));

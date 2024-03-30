@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Demo.BLL.Interfaces;
 using Demo.BLL.Repositories;
+using Demo.BLL.Specification;
 using Demo.DAL.Entities;
 using Demo.PL.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -34,6 +35,7 @@ namespace Demo.PL.Controllers
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
+
         public async Task<IActionResult> Index(string SearchValue)
         {
             // Binding is sending data from the Controller to the view
@@ -42,9 +44,12 @@ namespace Demo.PL.Controllers
             //2.ViewBag : Carries Dynamic Variable which know it's value in run time.
             var departments = Enumerable.Empty<Department>();
             if (string.IsNullOrEmpty(SearchValue))
-                departments = await _unitOfWork.DepartmentRepository.GetAll();
+                departments = await _unitOfWork.Repository<Department>().GetAll();
             else
-                departments = _unitOfWork.DepartmentRepository.SearchDepartmentByName(SearchValue);
+            {
+                var spec = new DepartmentWithEmployeeSpecifications(SearchValue);
+                departments = await _unitOfWork.Repository<Department>().SearchByNameWithSpec(spec);
+            }
             
             var mappedDepts = _mapper.Map<IEnumerable<Department>, IEnumerable<DepartmentViewModel>>(departments);
             return View(mappedDepts);
@@ -63,7 +68,7 @@ namespace Demo.PL.Controllers
             if (ModelState.IsValid) // Server side Validation
             {
                 var mappedDept = _mapper.Map<DepartmentViewModel, Department>(departmentVM);
-                await _unitOfWork.DepartmentRepository.Add(mappedDept);
+                await _unitOfWork.Repository<Department>().Add(mappedDept);
                 // TempData Transfer data from action to view of another action.
                 // And it is Key value dictionary like ViewData
                 TempData["Message"] = "Department Created Succefully"; 
@@ -76,7 +81,7 @@ namespace Demo.PL.Controllers
         {
             if (id == null)
                 return BadRequest();
-            var department = await _unitOfWork.DepartmentRepository.Get(id.Value);
+            var department = await _unitOfWork.Repository<Department>().Get(id.Value);
             if (department == null)
                 return BadRequest();
             var mappedDept = _mapper.Map<Department, DepartmentViewModel>(department);
@@ -105,7 +110,7 @@ namespace Demo.PL.Controllers
                 try
                 {
                     var mappedDept = _mapper.Map<DepartmentViewModel, Department>(departmentVM);
-                    await _unitOfWork.DepartmentRepository.Update(mappedDept);
+                    await _unitOfWork.Repository<Department>().Update(mappedDept);
                     return RedirectToAction(nameof(Index));
                 }
                 catch(Exception ex)
@@ -140,7 +145,7 @@ namespace Demo.PL.Controllers
             try
             {
                 var mappedDept = _mapper.Map<DepartmentViewModel,Department>(departmentVM);
-                await _unitOfWork.DepartmentRepository.Delete(mappedDept);
+                await _unitOfWork.Repository<Department>().Delete(mappedDept);
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)

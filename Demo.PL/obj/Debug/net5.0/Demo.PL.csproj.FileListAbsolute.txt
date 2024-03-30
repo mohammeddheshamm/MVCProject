@@ -460,3 +460,4 @@ E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution
 E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.PL\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
 E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.PL\bin\Debug\net5.0\Castle.Core.dll
 E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.PL\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Proxies.dll
+E:\TAAZZ\ASP.NET\Eng Ahmed Nasr\07 ASP.NET MVC\Session 02\ThreeTierLayerSolution\Demo.PL\obj\Debug\net5.0\Demo.PL.sourcelink.json

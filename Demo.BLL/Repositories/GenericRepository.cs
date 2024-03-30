@@ -1,4 +1,5 @@
 ﻿using Demo.BLL.Interfaces;
+using Demo.BLL.Specification;
 using Demo.DAL.Contexts;
 using Demo.DAL.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -45,13 +46,21 @@ namespace Demo.BLL.Repositories
                 return (IEnumerable<T>) await _dbContext.Set<Employee>().Include(E => E.Department).ToListAsync();
             return await _dbContext.Set<T>().ToListAsync();
         }
-         
 
+        public async Task<IReadOnlyList<T>> SearchByNameWithSpec(ISpecification<T> spec)
+        {
+            return await ApplySpecification(spec).ToListAsync();
+        }
 
         public async Task<int> Update(T Item)
         {
             _dbContext.Set<T>().Update(Item);
             return await _dbContext.SaveChangesAsync();
+        }
+
+        private IQueryable<T> ApplySpecification(ISpecification<T> spec)
+        {
+            return SpecificationEvaluator<T>.GetQuery(_dbContext.Set<T>(), spec);
         }
     }
 }
